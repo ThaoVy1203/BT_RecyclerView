@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BT_RecyclerView</string>
+    <string name="more_options">Tùy chọn thêm</string>
+    <string name="album_artwork">Ảnh bìa bài hát</string>
+    <string name="playing_indicator">Đang phát nhạc</string>
+    <string name="desc_back_button">Quay lại</string>
+    <string name="desc_album_art">Ảnh bìa bài hát</string>
+    <string name="desc_song_progress">Thanh tiến trình bài hát</string>
+    <string name="desc_previous_button">Bài trước</string>
+    <string name="desc_play_pause_button">Phát hoặc tạm dừng</string>
+    <string name="desc_next_button">Bài tiếp theo</string>
+    <string name="desc_shuffle_button">Bật hoặc tắt phát ngẫu nhiên</string>
+    <string name="desc_favorite_button">Thêm hoặc bỏ yêu thích</string>
+    <string name="desc_repeat_button">Bật hoặc tắt chế độ lặp lại</string>
 </resources>

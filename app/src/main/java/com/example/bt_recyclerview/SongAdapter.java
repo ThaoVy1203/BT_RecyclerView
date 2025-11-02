@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
@@ -22,15 +20,15 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         this.songList = songList;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgAlbum;
-        TextView txtTitle, txtArtist;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imgSong;
+        TextView txtSongTitle, txtSongArtist;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgAlbum = itemView.findViewById(R.id.imgAlbum);
-            txtTitle = itemView.findViewById(R.id.txtTitle);
-            txtArtist = itemView.findViewById(R.id.txtArtist);
+            imgSong = itemView.findViewById(R.id.imgSong);
+            txtSongTitle = itemView.findViewById(R.id.txtSongTitle);
+            txtSongArtist = itemView.findViewById(R.id.txtSongArtist);
         }
     }
 
@@ -44,9 +42,9 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Song song = songList.get(position);
-        holder.txtTitle.setText(song.getTitle());
-        holder.txtArtist.setText(song.getArtist());
-        holder.imgAlbum.setImageResource(song.getImageResId());
+        holder.txtSongTitle.setText(song.getTitle());
+        holder.txtSongArtist.setText(song.getArtist());
+        holder.imgSong.setImageResource(song.getImageResId());
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, SongDetailActivity.class);

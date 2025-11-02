@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
     RecyclerView recyclerSong;
     ArrayList<Song> songList;
     SongAdapter songAdapter;
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerSong = findViewById(R.id.recyclerSong);
         songList = new ArrayList<>();
 
-        // 🎵 Danh sách 15 bài hát
         songList.add(new Song("Perfect", "Ed Sheeran", R.drawable.song1));
         songList.add(new Song("Shallow", "Lady Gaga & Bradley Cooper", R.drawable.song2));
         songList.add(new Song("Someone Like You", "Adele", R.drawable.song3));
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         songList.add(new Song("Night Changes", "One Direction", R.drawable.song14));
         songList.add(new Song("We Don’t Talk Anymore", "Charlie Puth ft. Selena Gomez", R.drawable.song15));
 
-        songAdapter = new SongAdapter(this, songList);
         recyclerSong.setLayoutManager(new LinearLayoutManager(this));
+        songAdapter = new SongAdapter(this, songList);
         recyclerSong.setAdapter(songAdapter);
     }
 }
